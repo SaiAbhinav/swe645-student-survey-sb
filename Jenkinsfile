@@ -15,8 +15,9 @@ pipeline{
                 }
             }
         }
-        stage('Maven clean & Install'){
+        stage('Maven Clean & Install'){
             steps{
+		echo 'Building the Jar file'
                 script{
                     sh 'mvn clean'
                     sh 'mvn install'
@@ -46,7 +47,7 @@ pipeline{
         }
         stage('Deploying') {
             steps {
-                echo 'Deploying to a node in Rancher and Load Balancer'
+                echo 'Deploying the image'
                 script {
                     sh "kubectl set image deployment/survey-deployment survey=${registry}:${env.dateTag}"
                 }
