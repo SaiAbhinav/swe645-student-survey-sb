@@ -2,7 +2,7 @@ pipeline{
     environment {
         registry = "saiabhinavvasepalli/student-survey-sb"
         registryCredential = 'dockerhub'
-	}
+    }
     agent any
     tools{
         maven 'Maven 3.8.6'
@@ -55,8 +55,8 @@ pipeline{
     }
  
     post {
-	    always {
-			sh 'docker logout'
-		}
-	}    
+	always {
+	    sh 'docker logout'
+	}
+    }    
 }
