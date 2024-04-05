@@ -11,7 +11,7 @@ import com.survey.SurveyApplication.Model.SurveyForm;
 import com.survey.SurveyApplication.Repository.SurveyRepository;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/")
 @CrossOrigin(origins="*")
 public class SurveyController {
 	
