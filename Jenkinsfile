@@ -5,7 +5,7 @@ pipeline{
     }
     agent any
     tools{
-        maven '3.8.6'
+        maven '3.9.1'
     }
     stages{
         stage('Preparation') {
